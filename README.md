@@ -1,6 +1,6 @@
 # Clam Shell
 
-![Clam Shell Banner](https://github.com/Qolors/clam-shell/blob/docs/images/clamshell_logo.png)
+![Clam Shell Banner](https://github.com/Qolors/Clam-Shell/blob/main/docs/clamshell_logo.png)
 
 Clam Shell is a self-hosted anti-virus engine for Discord servers, powered by the open-source ClamAV engine. It provides real-time scanning of files and URLs shared within your Discord server, ensuring a safe and secure environment for your community. Clam Shell also features phishing detection by referencing a list of phishing URLs, which is automatically updated every 12 hours. Additionally, it supports posting logs to a designated Discord channel for easy monitoring if desired.
 
@@ -19,6 +19,11 @@ Clam Shell is a self-hosted anti-virus engine for Discord servers, powered by th
 - Improve Discord Bot message formatting
 - Add other malicious URL type processing & checks
 - Add editing configurations through Discord Bot
+
+## Support
+
+If you find any of my work useful and want to help support Development
+<a href="https://www.buymeacoffee.com/Qolors" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174"></a>
 
 ## Prerequisites
 
