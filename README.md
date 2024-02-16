@@ -1,7 +1,3 @@
-Here's an updated README for Clam Shell with the additional information:
-
----
-
 # Clam Shell
 
 Clam Shell is a self-hosted anti-virus engine for Discord servers, powered by the open-source ClamAV engine. It provides real-time scanning of files and URLs shared within your Discord server, ensuring a safe and secure environment for your community. Clam Shell also features phishing detection by referencing a list of phishing URLs, which is automatically updated every 12 hours. Additionally, it supports posting logs to a designated Discord channel for easy monitoring if desired.
@@ -30,7 +26,58 @@ Clam Shell is a self-hosted anti-virus engine for Discord servers, powered by th
 ## Installation
 
 1. **Obtain the Docker Compose file and the configuration template:**
-   - Download the `docker-compose.yml` and `config.json` templates from the Clam Shell repository.
+
+   - Create a `docker-compose.yaml` file:
+```md
+version: '3.8'
+
+services:
+
+  clamshell_server:
+    image: clamav/clamav:latest
+    container_name: clamshell_server
+    networks:
+      - clamshell_network
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    ports:
+      - "5672:5672"
+      - "15672:15672"  # For RabbitMQ management interface
+    networks:
+      - clamshell_network
+ 
+  clamshell_worker:
+    image: clamshell_worker:latest
+    container_name: clamshell_worker
+    volumes:
+        - ./config.json:/app/config.json
+    networks:
+      - clamshell_network
+ 
+  clamshell_bot:
+    image: clamshell_bot:latest
+    container_name: clamshell_bot
+    volumes:
+        - ./config.json:/app/config.json
+    networks:
+      - clamshell_network
+
+  networks:
+    clamshell_network:
+```
+   - Create a `config.json` file:
+
+```json
+{
+  "Settings": {
+    "BOT_TOKEN": "YOUR_BOT_TOKEN",
+    "WEBHOOK_URL": "YOUR_WEBHOOK_URL",
+    "USE_LOGS": true,
+    "USE_REACTIONS": true
+  }
+}
+```
 
 2. **Configure Clam Shell:**
    - Edit `config.json` to set your Discord bot token, webhook URL for logging, and other configuration options.
