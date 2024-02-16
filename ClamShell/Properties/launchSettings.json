@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "ClamShell": {
+      "commandName": "Project"
+    },
+    "Docker": {
+      "commandName": "Docker"
+    }
+  }
+}

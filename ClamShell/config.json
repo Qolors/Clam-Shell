@@ -1,0 +1,8 @@
+{
+  "Settings": {
+    "BOT_TOKEN": "",
+    "WEBHOOK_URL": "",
+    "USE_LOGS": true,
+    "USE_REACTIONS": true
+  }
+}
