@@ -1,5 +1,7 @@
 # Clam Shell
 
+![Clam Shell Banner](https://github.com/Qolors/clam-shell/blob/docs/images/clamshell_logo.png)
+
 Clam Shell is a self-hosted anti-virus engine for Discord servers, powered by the open-source ClamAV engine. It provides real-time scanning of files and URLs shared within your Discord server, ensuring a safe and secure environment for your community. Clam Shell also features phishing detection by referencing a list of phishing URLs, which is automatically updated every 12 hours. Additionally, it supports posting logs to a designated Discord channel for easy monitoring if desired.
 
 ## Features
@@ -80,7 +82,8 @@ services:
 ```
 
 2. **Configure Clam Shell:**
-   - Edit `config.json` to set your Discord bot token, webhook URL for logging, and other configuration options.
+   - Edit `config.json` to set your Discord bot token, webhook URL for logging, and other configuration options
+   - If your `config.json` file is not in the same location as your `docker-compose.yaml`, update the volumes path
 
 3. **Start Clam Shell:**
    ```bash
@@ -111,10 +114,12 @@ docker-compose up -d
 
 Contributions are welcome! Please feel free to submit pull requests or open issues to improve the software.
 
+## Libraries Utilized
+- [Discord.Net](https://discordnet.dev/index.html)
+- [RabbitMQ](https://rabbitmq.com/)
+- [nClam](https://github.com/tekmaven/nClam)
+
 ## License
 
 Clam Shell is released under the [MIT License](LICENSE).
 
----
-
-Ensure that you provide the correct download links or instructions for obtaining the `docker-compose.yml` and `config.json` templates. You may also want to provide more detailed instructions for editing the `config.json` file based on the specific configuration options available in your software.
