@@ -48,7 +48,7 @@ services:
       - clamshell_network
  
   clamshell_worker:
-    image: clamshell_worker:latest
+    image: qolors/clamshell_worker:latest
     container_name: clamshell_worker
     volumes:
         - ./config.json:/app/config.json
@@ -56,7 +56,7 @@ services:
       - clamshell_network
  
   clamshell_bot:
-    image: clamshell_bot:latest
+    image: qolors/clamshell_bot:latest
     container_name: clamshell_bot
     volumes:
         - ./config.json:/app/config.json
