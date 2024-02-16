@@ -23,6 +23,7 @@ Clam Shell is a self-hosted anti-virus engine for Discord servers, powered by th
 ## Support
 
 If you find any of my work useful and want to help support Development
+
 <a href="https://www.buymeacoffee.com/Qolors" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174"></a>
 
 ## Prerequisites
