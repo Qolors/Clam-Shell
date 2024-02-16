@@ -71,8 +71,8 @@ services:
     networks:
       - clamshell_network
 
-  networks:
-    clamshell_network:
+networks:
+  clamshell_network:
 ```
    - Create a `config.json` file:
 
